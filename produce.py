@@ -8,7 +8,7 @@ import math
 parser = argparse.ArgumentParser(description='Generate non-China routes for BIRD.')
 parser.add_argument('--exclude', metavar='CIDR', type=str, nargs='*',
                     help='IPv4 ranges to exclude in CIDR format')
-parser.add_argument('--next', default="wg0", metavar = "INTERFACE OR IP",
+parser.add_argument('--next', default="utun", metavar = "INTERFACE OR IP",
                     help='next hop for where non-China IP address, this is usually the tunnel interface')
 
 args = parser.parse_args()
