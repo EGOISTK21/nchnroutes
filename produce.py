@@ -124,6 +124,9 @@ subtract_cidr(root, RESERVED)
 # get rid of reserved addresses
 subtract_cidr(root_v6, RESERVED_V6)
 
+# add fake ip addresses
+root.append(Node(IPv4Network('198.18.0.0/16')))
+
 with open("routes4.conf", "w") as f:
     dump_bird(root, f)
 
