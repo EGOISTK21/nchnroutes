@@ -138,9 +138,9 @@ subtract_cidr(root, RESERVED)
 subtract_cidr(root_v6, RESERVED_V6)
 
 # add fake ip reserved addresses
-root.append(Node(IPv4Network('198.18.0.0/16')))
+#root.append(Node(IPv4Network('198.18.0.0/16')))
 # add fake ip utun ip for netwatch
-root.append(Node(IPv4Network('198.18.0.1/32')))
+#root.append(Node(IPv4Network('198.18.0.1/32')))
 
 
 with open("routes4.conf", "w") as f:
